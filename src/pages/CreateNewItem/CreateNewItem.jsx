@@ -12,7 +12,7 @@ const CreateNewItem = () => {
 
       <Section id="create-item-main">
         <div className="form-wrapper">
-          <div className="req-fields">
+          <div className="req-fields gap-5">
             <div className="left">
               <div>
                 <div className="text-light-1 fw-bold">
@@ -90,7 +90,7 @@ const CreateNewItem = () => {
 
           <div className="sub-sec mb-0">
             <h4 className="mb-3">Collection</h4>
-            <p className="text-light-1">
+            <p className="text-light-1 mb-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
@@ -105,7 +105,7 @@ const CreateNewItem = () => {
 
             <div className="settings">
               <div className="item active">
-                <div className="left">
+                <div className="item-left">
                   <div className="img">
                     <img
                       className="icon"
@@ -120,12 +120,12 @@ const CreateNewItem = () => {
                     </p>
                   </div>
                 </div>
-                <div className="right">
+                <div className="item-right">
                   <button className="btn btn-add-lg">+</button>
                 </div>
               </div>
               <div className="item">
-                <div className="left">
+                <div className="item-left">
                   <div className="img">
                     <img
                       className="icon"
@@ -140,12 +140,12 @@ const CreateNewItem = () => {
                     </p>
                   </div>
                 </div>
-                <div className="right">
+                <div className="item-right">
                   <button className="btn btn-add-lg">+</button>
                 </div>
               </div>
               <div className="item">
-                <div className="left">
+                <div className="item-left">
                   <div className="img">
                     <img
                       className="icon"
@@ -160,12 +160,12 @@ const CreateNewItem = () => {
                     </p>
                   </div>
                 </div>
-                <div className="right">
+                <div className="item-right">
                   <button className="btn btn-add-lg">+</button>
                 </div>
               </div>
               <div className="item">
-                <div className="left">
+                <div className="item-left">
                   <div className="img">
                     <img
                       className="icon"
@@ -180,7 +180,7 @@ const CreateNewItem = () => {
                     </p>
                   </div>
                 </div>
-                <div className="right">
+                <div className="item-right">
                   <label class="switch">
                     <input type="checkbox" />
                     <span class="slider round"></span>
@@ -188,7 +188,7 @@ const CreateNewItem = () => {
                 </div>
               </div>
               <div className="item">
-                <div className="left">
+                <div className="item-left">
                   <div className="img">
                     <img
                       className="icon"
@@ -203,7 +203,7 @@ const CreateNewItem = () => {
                     </p>
                   </div>
                 </div>
-                <div className="right">
+                <div className="item-right">
                   <label class="switch">
                     <input type="checkbox" />
                     <span class="slider round"></span>
@@ -211,7 +211,7 @@ const CreateNewItem = () => {
                 </div>
               </div>
               <div className="item d-block no-bb">
-                <div className="left d-block">
+                <div className="item-left d-block">
                   <div className="text">
                     <h4>Supply</h4>
                     <p className="text-light-1 mt-3">
@@ -224,7 +224,7 @@ const CreateNewItem = () => {
                 </div>
               </div>
               <div className="item no-bb d-block">
-                <div className="left flex-grow-1 d-block">
+                <div className="item-left flex-grow-1 d-block">
                   <div className="text">
                     <h4>Blockchain</h4>
                     <p className="text-light-1 my-3">
@@ -257,6 +257,10 @@ const CreateNewItem = () => {
                 type="text"
                 placeholder="To Freeze Metadata, You Must Create Your First Item"
               />
+            </div>
+
+            <div className="p-3 px-5 btn btn-primary" style={{ opacity: 0.5 }}>
+              Create
             </div>
           </div>
         </div>

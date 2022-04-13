@@ -110,6 +110,10 @@ button {
   font-size: 16px !important;
 }
 
+.fs-14 {
+  font-size: 14px !important;
+}
+
 .lh-1 {
   line-height: 1;
 }
@@ -573,15 +577,28 @@ input[type="number"] {
   border: 2px solid $color27 !important;
 }
 
+.right {
+  // min-width: 356px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
+
 .img-uploader {
   label {
     position: relative;
     display: block;
     border: 2px dashed #707070;
     border-radius: 10px;
-    min-width: 356px;
+    // width: 100%;
+    width: 356px;
     height: 278px;
     cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
 
     .upload {
       position: absolute;
@@ -670,6 +687,7 @@ input:checked + .slider:before {
     border: 1px solid $color7;
     display: flex;
     align-items: center;
+    padding-right: 40px;
 
     &.active {
       border-color: $color1;
@@ -766,6 +784,92 @@ input:checked + .slider:before {
   &.bold {
     .selected-text {
       font-weight: bold;
+    }
+  }
+}
+
+.accordion-root {
+  background-color: #fcfdff;
+  border: 1px solid rgba(26, 26, 26, 0.19);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  @extend %transitioned;
+
+  .accordion-head {
+    padding: 22px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.19);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    cursor: pointer;
+    @extend %transitioned;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .accordion-head__icon {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .accordion-body {
+    padding: 40px 32px;
+
+    @media screen and (max-width: 575px) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .placeholder {
+      text-align: center;
+
+      &-text {
+        font-size: 48px;
+        font-weight: 400;
+        color: #757171;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .accordion-head__arrow {
+    @extend %transitioned;
+  }
+
+  &.blend {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+
+    &,
+    .accordion-head {
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-top: 0 !important;
+    }
+
+    .accordion-head {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &.opened {
+    .accordion-head__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:not(.opened) {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    .accordion-head {
+      border-bottom-color: transparent;
     }
   }
 }
