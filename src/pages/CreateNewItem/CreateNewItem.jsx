@@ -1,6 +1,8 @@
 import React from "react";
 import HeroSm from "../../components/HeroSm/HeroSm";
 import Section from "../../components/Section/Section";
+import Select from "../../components/Select/select";
+import Option from "../../components/Select/option";
 import MainLayout from "../../layouts/MainLayout";
 
 const CreateNewItem = () => {
@@ -17,12 +19,12 @@ const CreateNewItem = () => {
                   <span className="text-red">*</span>Required Fields
                 </div>
 
-                <h2 className="my-4">
+                <h4 className="my-4">
                   Image, Video, Audio, Or 3D Model
                   <span className="text-red">*</span>
-                </h2>
+                </h4>
 
-                <div className="text-light-1">
+                <div className="text-light-1 fs-16 lh-15">
                   File Types Supported: JPG, PNG, GIF, SVG, MP4, WEBM, WAV, OGG,
                   GLB, GLTF. MAX SIZE: 100MB
                 </div>
@@ -31,7 +33,13 @@ const CreateNewItem = () => {
 
             <div className="right">
               <div className="img-uploader">
-                <label htmlFor="image"></label>
+                <label htmlFor="image">
+                  <img
+                    className="upload"
+                    src="./assets/vectors/upload-placeholder.svg"
+                    alt="upload"
+                  />
+                </label>
                 <input id="image" type="file" />
               </div>
             </div>
@@ -47,7 +55,7 @@ const CreateNewItem = () => {
           </div>
 
           <div className="sub-sec">
-            <h2 className="mb-3">External Links</h2>
+            <h4 className="mb-3">External Links</h4>
             <p className="text-light-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
               voluptatem a sequi, ea esse nemo adipisci numquam ipsa blanditiis
@@ -56,12 +64,12 @@ const CreateNewItem = () => {
             </p>
 
             <div className="custom-form-control">
-              <input type="text" placeholder="Item Name" />
+              <input type="text" placeholder="www.dummy.com" />
             </div>
           </div>
 
           <div className="sub-sec">
-            <h2 className="mb-3">Description</h2>
+            <h4 className="mb-3">Description</h4>
             <p className="text-light-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
               voluptatem a sequi, ea esse nemo adipisci numquam ipsa blanditiis
@@ -80,14 +88,23 @@ const CreateNewItem = () => {
             </div>
           </div>
 
-          <div className="sub-sec">
-            <h2 className="mb-3">Collection</h2>
+          <div className="sub-sec mb-0">
+            <h4 className="mb-3">Collection</h4>
             <p className="text-light-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
+            <Select
+              icon="./assets/vectors/select-round-icon.svg"
+              placeholder="United Collection #215557776"
+            >
+              <Option value="United Collection #215557776">
+                United Collection #215557776
+              </Option>
+            </Select>
+
             <div className="settings">
-              <div className="item">
+              <div className="item active">
                 <div className="left">
                   <div className="img">
                     <img
@@ -97,7 +114,7 @@ const CreateNewItem = () => {
                     />
                   </div>
                   <div className="text">
-                    <h2>Properties</h2>
+                    <h4>Properties</h4>
                     <p className="text-light-1 mt-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
@@ -117,7 +134,7 @@ const CreateNewItem = () => {
                     />
                   </div>
                   <div className="text">
-                    <h2>Level</h2>
+                    <h4>Level</h4>
                     <p className="text-light-1 mt-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
@@ -137,7 +154,7 @@ const CreateNewItem = () => {
                     />
                   </div>
                   <div className="text">
-                    <h2>Status</h2>
+                    <h4>Status</h4>
                     <p className="text-light-1 mt-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
@@ -157,7 +174,7 @@ const CreateNewItem = () => {
                     />
                   </div>
                   <div className="text">
-                    <h2>Unlockable Content</h2>
+                    <h4>Unlockable Content</h4>
                     <p className="text-light-1 mt-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
@@ -180,7 +197,7 @@ const CreateNewItem = () => {
                     />
                   </div>
                   <div className="text">
-                    <h2>Explicit &amp; Sensitive Content</h2>
+                    <h4>Explicit &amp; Sensitive Content</h4>
                     <p className="text-light-1 mt-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
@@ -193,29 +210,33 @@ const CreateNewItem = () => {
                   </label>
                 </div>
               </div>
-              <div className="item no-bb">
-                <div className="left flex-grow-1">
+              <div className="item d-block no-bb">
+                <div className="left d-block">
                   <div className="text">
-                    <h2>Supply</h2>
+                    <h4>Supply</h4>
                     <p className="text-light-1 mt-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                     <div className="custom-form-control">
-                      <input type="text" />
+                      <input type="text" placeholder="01" />
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="item no-bb">
-                <div className="left flex-grow-1">
+              <div className="item no-bb d-block">
+                <div className="left flex-grow-1 d-block">
                   <div className="text">
-                    <h2>Blockchain</h2>
-                    <p className="text-light-1 mt-3">
+                    <h4>Blockchain</h4>
+                    <p className="text-light-1 my-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <div className="custom-form-control">
-                      <input type="text" />
-                    </div>
+
+                    <Select
+                      placeholder="Ethereum"
+                      icon="./assets/vectors/select-eth-icon.svg"
+                    >
+                      <Option value="Ethereum">Ethereum</Option>
+                    </Select>
                   </div>
                 </div>
               </div>
@@ -223,7 +244,7 @@ const CreateNewItem = () => {
           </div>
 
           <div className="sub-sec">
-            <h2 className="mb-3">Freeze Metadata</h2>
+            <h4 className="mb-3">Freeze Metadata</h4>
             <p className="text-light-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
               voluptatem a sequi, ea esse nemo adipisci numquam ipsa blanditiis
