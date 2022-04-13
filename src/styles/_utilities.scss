@@ -807,7 +807,7 @@ input:checked + .slider:before {
     cursor: pointer;
     @extend %transitioned;
 
-    .left {
+    .accordion-head__left {
       display: flex;
       align-items: center;
 

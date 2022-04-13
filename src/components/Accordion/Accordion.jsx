@@ -22,13 +22,13 @@ const Accordion = ({ className, bodyClassName, icon, title, children }) => {
     <div ref={rootRef} className={clsx("accordion-root", className)}>
       <div ref={headRef} className="accordion-head">
         {" "}
-        <div className="left">
+        <div className="accordion-head__left">
           {icon && (
             <img className="accordion-head__icon" src={icon} alt="icon" />
           )}
           {title}
         </div>
-        <div className="right">
+        <div className="accordion-head__right">
           <img
             className="accordion-head__arrow"
             src="./assets/vectors/select-arrow.svg"
